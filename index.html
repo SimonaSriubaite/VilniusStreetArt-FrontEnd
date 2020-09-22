@@ -55,54 +55,16 @@
         </div>
 
         <div>
-        <p style="margin: 20px; margin-top: 40px; margin-bottom: 40px;" >“Art is an evolutionary act. The shape of art and its role in society is constantly changing. At no point is art static. There are no rules.”
+          <p style="margin: 20px; margin-top: 40px;" >
+            The Vilnius Street Art Project aims to immortalize the temporality of art that has appeared on the walls of city buildings.</p>
+        <p style="margin: 20px; margin-bottom: 40px;" >“Art is an evolutionary act. The shape of art and its role in society is constantly changing. At no point is art static. There are no rules.”
             ― Raymond Salvatore Harmon</p>
             <hr class="uk-divider-icon">
         </div>
 
         <div>
             <h2 style="margin-left: 20px; margin-bottom: 40px;">Gallery</h2>
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div>
-                    <div class="uk-card uk-card-default">
-                        <div class="uk-card-media-top">
-                            <a href="#modal-example" uk-toggle>
-                            <img src="https://www.lrt.lt/img/2019/09/12/508991-914046-1287x836.jpg" alt="">
-                            </a>
-                        </div>
-                        <div id="modal-example" uk-modal>
-                            <div class="uk-modal-dialog uk-modal-body">
-                                <h2 class="uk-modal-title">Headline</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <p class="uk-text-right">
-                                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                                    <button class="uk-button uk-button-primary" type="button">Save</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="uk-card uk-card-default">
-                        <div class="uk-card-media-top">
-                            <a href="#modal-example" uk-toggle>
-                            <img src="https://www.graffitistreet.com/vilnius-street-art-festival-lithuania-2015/vilnius-street-art-festival-2015-sepe-chazme/" alt="">
-                            </a>
-                        </div>
-                        <div id="modal-example" uk-modal>
-                            <div class="uk-modal-dialog uk-modal-body">
-                                <h2 class="uk-modal-title">Headline</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <p class="uk-text-right">
-                                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                                    <button class="uk-button uk-button-primary" type="button">Save</button>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <div class="uk-child-width-1-2@m" uk-grid id="vsa">
             </div>
@@ -123,8 +85,8 @@
                             <img src="${work.image}" alt="">
                         </div>
                         <div class="uk-card-body">
-                            <h3 class="uk-card-title">Media Top</h3>
                                 <p>${work.description}</p>
+                                <p>Location: ${work.location}</p>
                         </div>
                     </div>
                 </div>
