@@ -7,3 +7,12 @@ main {
   max-width: 1024px;
   margin: 0 auto;
 }
+
+.body-wrap {
+  height: 74px;
+  overflow: hidden;
+}
+
+.button-container {
+  padding-top: 20px;
+}

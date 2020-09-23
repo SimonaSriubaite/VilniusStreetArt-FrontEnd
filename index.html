@@ -67,6 +67,7 @@
             
 
             <div class="uk-child-width-1-2@m" uk-grid id="vsa">
+              
             </div>
         </div>
     </main>
@@ -85,16 +86,27 @@
                             <img src="${work.image}" alt="">
                         </div>
                         <div class="uk-card-body">
-                                <p>${work.description}</p>
-                                <p>Location: ${work.location}</p>
-                        </div>
+                          <div class="body-wrap">
+                            <p>${work.description}</p>
+                            <p>Location: ${work.location}</p>
+                          </div>
+                          <div class="button-container">
+                          <button class="button" class="uk-button uk-button-default uk-button-small">Read more</button>
+                          </div>
+                          </div>
                     </div>
                 </div>
             </div>
                 `;
+                document.querySelectorAll(".button").forEach((button) => {
+            button.addEventListener("click" , (e) => {
+            button.parentElement.parentElement.querySelector(".body-wrap").style.height = "auto";
+          })
             });
   
             return data;
+          });
+          
           })
         </script>
         
