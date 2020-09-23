@@ -16,3 +16,12 @@ main {
 .button-container {
   padding-top: 20px;
 }
+
+.slide-img {
+  width: 728px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 10px;
+}

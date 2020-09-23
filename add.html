@@ -65,8 +65,23 @@
                 </div>
                 <button class="uk-button uk-button-default" type="submit">Add</button>
             </fieldset>
-        </form>        
+        </form>
+
+        <div>
+          <div class="uk-position-relative uk-visible-toggle uk-light" style="margin: 20px;" tabindex="-1" uk-slider="center: true">
+
+            <ul class="uk-slider-items uk-grid" id="slides">
+                
+            </ul>
+        
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        
+          </div>
+        </div>        
     </main>
+
+    <footer>&copy; 2020 SS. All Rights Reserved.</footer>
 
     <script>
         document.forms[0].addEventListener("submit", (e) => {
@@ -86,6 +101,24 @@
         }).then(() => alert("You succesfully added some new street art"));
       });
 
+      const art = document.getElementById("slides");
+        fetch("http://127.0.0.1:3000")
+          .then((res) => res.json())
+          .then((data) => {
+            data.forEach((slide) => {
+              art.innerHTML += `
+              <li class="uk-width-3-4">
+                    <div class="uk-panel">
+                        <img src="${slide.image}" class="slide-img" alt="">
+                        <div class="uk-position-center uk-panel"></div>
+                    </div>
+                </li>
+                `;
+  
+            return data;
+          });
+          
+          })
     </script>
     </body>
 </html>
