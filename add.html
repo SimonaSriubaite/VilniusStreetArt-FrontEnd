@@ -63,12 +63,21 @@
                 <div class="uk-margin">
                     <input class="uk-input" type="text" id="location" placeholder="Location" required>
                 </div>
+                <div class="uk-margin">
+                  <select class="uk-select" type="text" id="district">
+                      <option selected>Select a district</option>
+                      <option value="Senamiestis">Senamiestis</option>
+                      <option value="Užupis">Užupis</option>
+                      <option value="Centras" >Centras</option>
+                      <option value="Naujamiestis">Naujamiestis</option>
+                  </select>
+              </div>
                 <button class="uk-button uk-button-default" type="submit">Add</button>
             </fieldset>
         </form>
 
         <div>
-          <div class="uk-position-relative uk-visible-toggle uk-light" style="margin: 20px;" tabindex="-1" uk-slider="center: true">
+          <div class="uk-position-relative uk-visible-toggle uk-light" style="margin: 20px;" tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 3000">
 
             <ul class="uk-slider-items uk-grid" id="slides">
                 
@@ -97,6 +106,7 @@
             description: document.getElementById("description").value,
             author: document.getElementById("author").value,
             location: document.getElementById("location").value,
+            district: document.getElementById("district").value,
           }),
         }).then(() => alert("You succesfully added some new street art"));
       });
