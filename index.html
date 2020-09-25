@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vilnius Street Art</title>
     <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" /> 
-
+    
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"
     />
+    <link rel="stylesheet" href="style.css" /> 
+    
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
   </head>
@@ -63,20 +64,52 @@
         </div>
 
         <div>
-            <h2 style="margin-left: 20px; margin-bottom: 40px;">Gallery</h2>
+            <h2 style="margin-left: 20px">Gallery</h2>
             
+
+          <div class="buttons">
+            <p uk-margin class="first-button">
+              <button class="button-district uk-button uk-button-default">Senamiestis</button>
+            </p>
+
+            <p uk-margin>
+              <button class="button-district uk-button uk-button-default">Užupis</button>
+            </p>
+
+            <p uk-margin>
+              <button class="button-district uk-button uk-button-default">Centras</button>
+            </p>
+
+            <p uk-margin>
+              <button class="button-district uk-button uk-button-default">Naujamiestis</button>
+            </p>
+          </div>
 
             <div class="uk-child-width-1-2@m" uk-grid id="vsa">
               
             </div>
         </div>
     </main>
+    
+    <footer>&copy; 2020 SS. All Rights Reserved.</footer>
 
     <script>
+      list();
+
+      document.querySelectorAll(".button-district").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          list(button.textContent);
+        })
+      })
+      
+
+      function list(district) {
+        const query = district ? '?district=' + district : '';
         const artList = document.getElementById("vsa");
-        fetch("http://127.0.0.1:3000")
+        fetch("http://127.0.0.1:3000" + query)
           .then((res) => res.json())
-          .then((data) => {
+          .then((data) => { 
+            artList.innerHTML="";
             data.forEach((work) => {
               artList.innerHTML += `
               <div class="uk-child-width-1@m">
@@ -91,23 +124,34 @@
                             <p>Location: ${work.location}</p>
                           </div>
                           <div class="button-container">
-                          <button class="button" class="uk-button uk-button-default uk-button-small">Read more</button>
+                          <button class="more" class="uk-button uk-button-default uk-button-small">Read more</button>
                           </div>
                           </div>
                     </div>
                 </div>
             </div>
                 `;
-                document.querySelectorAll(".button").forEach((button) => {
-            button.addEventListener("click" , (e) => {
-            button.parentElement.parentElement.querySelector(".body-wrap").style.height = "auto";
-          })
-            });
-  
+                const button = document.querySelector("button")
+                
+                document.querySelectorAll(".more").forEach((button) => {
+                  button.addEventListener("click" , (e) => {
+
+                    if (button.textContent.toLowerCase().includes("more")) {
+                      button.textContent = "Read Less";
+                      button.parentElement.parentElement.querySelector(".body-wrap").style.height = "auto";
+                    }
+                    else{
+                      button.textContent = "Read More";
+                      button.parentElement.parentElement.querySelector(".body-wrap").style.height = "78px";
+                    }
+                  })
+                });
+
             return data;
           });
           
           })
+        };
         </script>
         
   </body>
