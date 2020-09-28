@@ -108,7 +108,7 @@
       function list(district) {
         const query = district ? '?district=' + district : '';
         const artList = document.getElementById("vsa");
-        fetch("http://127.0.0.1:3000" + query)
+        fetch("http://165.227.153.27:80" + query)
           .then((res) => res.json())
           .then((data) => { 
             artList.innerHTML="";
