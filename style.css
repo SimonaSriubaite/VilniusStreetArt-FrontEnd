@@ -13,21 +13,68 @@ main {
   overflow: hidden;
 }
 
+/*Navigation styles*/
+#nav {
+  margin-bottom: 0px;
+}
+
+.logo {
+  height: 40px;
+  padding: 20px;
+}
+
+/*Cover photo styles*/
+#cover {
+  background-image: url(https://g2.dcdn.lt/images/pix/880x550/BLyJwBsRvqo/vilnius-street-art-72228294.jpg);
+  justify-content: left;
+}
+
+/*Headings and paddings styles*/
+h1 {
+  margin-left: 20px;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+.main-p1 {
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.main-p2 {
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+/*Additional items styles*/
+form {
+  padding: 20px;
+  max-width: 984px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.slide-img {
+  width: 728px;
+  height: 486px;
+  object-fit: cover;
+}
+
+.card-img {
+  width: 492px;
+  height: 328px;
+  object-fit: cover;
+}
+
+/*Buttons styles*/
 .button-container {
   padding-top: 20px;
 }
 
-.slide-img {
-  width: 728px;
-}
-
-footer {
-  text-align: center;
-  padding: 10px 10px;
-}
-
 .buttons {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .button-district {
@@ -36,4 +83,32 @@ footer {
 
 .first-button {
   padding-top: 20px;
+}
+
+/*Footer styles*/
+footer {
+  text-align: center;
+  padding: 10px 10px;
+}
+/*Media queries*/
+@media only screen and (max-width: 768px) {
+  .buttons {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-img {
+    width: 497px;
+    height: 328px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .card-img {
+    width: 942.4px;
+    height: auto;
+    object-fit: cover;
+  }
 }
