@@ -5,94 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vilnius Street Art</title>
     <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
+    
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"
     />
+    <link rel="stylesheet" href="style.css" /> 
+    
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
   </head>
 
   <body>
     <header>
-      <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click" style="margin-bottom: 0px;">
+      <nav class="uk-navbar-container uk-margin" id="nav" uk-navbar="mode: click">
         <div class="uk-navbar-left">
-            <a href="index.html">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQwNC42NjYgNDA0LjY2NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlhNTElEXzIxNl8iIGQ9Ik0xMzYuMDAxLDUuMTI4YzIuMTM5LTQuNDg2LDcuNTExLTYuMzg5LDExLjk5Ny00LjI1MWwzLjAwNywxLjQzNGM0LjQ4NywyLjE0LDYuMzksNy41MTEsNC4yNTEsMTEuOTk3ICBjLTEuNTQzLDMuMjM3LTQuNzY5LDUuMTI5LTguMTMsNS4xMjljLTEuMjk5LDAtMi42MTctMC4yODItMy44NjctMC44NzhsLTMuMDA3LTEuNDM0QzEzNS43NjQsMTQuOTg2LDEzMy44NjIsOS42MTUsMTM2LjAwMSw1LjEyOHogICBNMjQ2LjA0Miw4Ny44NjdsLTcyLjE1MiwzNC40MDdjLTQuNDg2LDIuMTQtNi4zODksNy41MTItNC4yNSwxMS45OThjMS41NDQsMy4yMzYsNC43NjksNS4xMjgsOC4xMyw1LjEyOCAgYzEuMjk5LDAsMi42MTgtMC4yODIsMy44NjgtMC44NzhsNzIuMTUyLTM0LjQwN2M0LjQ4Ni0yLjE0LDYuMzg5LTcuNTEyLDQuMjUtMTEuOTk4QzI1NS44OTgsODcuNjI5LDI1MC41MjUsODUuNzI5LDI0Ni4wNDIsODcuODY3eiAgIE0yMDQuNzk1LDQ3LjkwNWw0MS4yNDcsMTkuNjY5YzEuMjUxLDAuNTk2LDIuNTY5LDAuODc4LDMuODY4LDAuODc4YzMuMzYxLDAsNi41ODYtMS44OTIsOC4xMy01LjEyOCAgYzIuMTM5LTQuNDg2LDAuMjM2LTkuODU4LTQuMjUtMTEuOTk4bC00MS4yNDctMTkuNjY5Yy00LjQ5LTIuMTM5LTkuODU4LTAuMjM2LTExLjk5OCw0LjI1ICBDMTk4LjQwNiw0MC4zOTMsMjAwLjMwOCw0NS43NjUsMjA0Ljc5NSw0Ny45MDV6IE0xMjQuODM3LDg2Ljc0OGMwLjAwNCwwLDAuMDA4LDAsMC4wMTIsMGw3OS45MzYtMC4xMDEgIGM0Ljk3LTAuMDA2LDguOTk0LTQuMDQxLDguOTg4LTkuMDEyYy0wLjAwNi00Ljk2Ny00LjAzNC04Ljk4OC05LTguOTg4Yy0wLjAwMywwLTAuMDA4LDAtMC4wMTIsMGwtNzkuOTM2LDAuMTAxICBjLTQuOTcsMC4wMDYtOC45OTQsNC4wNDEtOC45ODgsOS4wMTJDMTE1Ljg0Myw4Mi43MjYsMTE5Ljg3MSw4Ni43NDgsMTI0LjgzNyw4Ni43NDh6IE0xNzMuODksMzMuMTY2bDIuNjUyLDEuMjY1ICBjMS4yNSwwLjU5NiwyLjU2OCwwLjg3OCwzLjg2NywwLjg3OGMzLjM2MSwwLDYuNTg3LTEuODkyLDguMTMtNS4xMjljMi4xMzktNC40ODYsMC4yMzYtOS44NTctNC4yNTEtMTEuOTk3bC0yLjY1Mi0xLjI2NSAgYy00LjQ4Ni0yLjEzOC05Ljg1Ny0wLjIzNy0xMS45OTcsNC4yNTFDMTY3LjUwMSwyNS42NTYsMTY5LjQwMywzMS4wMjcsMTczLjg5LDMzLjE2NnogTTg3LjU2Niw4Ni43OTNjMC4wMDMsMCwwLjAwNywwLDAuMDExLDAgIGwzLjMzMy0wLjAwNGM0Ljk3MS0wLjAwNiw4Ljk5NS00LjA0LDguOTg5LTkuMDExYy0wLjAwNi00Ljk2Ny00LjAzMy04Ljk4OS05LTguOTg5Yy0wLjAwMywwLTAuMDA3LDAtMC4wMTEsMGwtMy4zMzMsMC4wMDQgIGMtNC45NzEsMC4wMDYtOC45OTUsNC4wNC04Ljk4OSw5LjAxMUM3OC41NzIsODIuNzcxLDgyLjYsODYuNzkzLDg3LjU2Niw4Ni43OTN6IE0xNDMuMjU4LDEzNi44ODJsLTMuMDA4LDEuNDM1ICBjLTQuNDg2LDIuMTQtNi4zODksNy41MTEtNC4yNDksMTEuOTk3YzEuNTQzLDMuMjM2LDQuNzY4LDUuMTI4LDguMTI5LDUuMTI4YzEuMjk5LDAsMi42MTgtMC4yODIsMy44NjgtMC44NzlsMy4wMDgtMS40MzUgIGM0LjQ4Ny0yLjE0LDYuMzg5LTcuNTExLDQuMjQ5LTExLjk5N0MxNTMuMTE1LDEzNi42NDQsMTQ3Ljc0MiwxMzQuNzQxLDE0My4yNTgsMTM2Ljg4MnogTTM0Mi41NSwyNTMuMDkxYy00Ljk3MSwwLTksNC4wMjktOSw5ICB2NS4yMDNjMCw0Ljk3MSw0LjAyOSw5LDksOXM5LTQuMDI5LDktOXYtNS4yMDNDMzUxLjU1LDI1Ny4xMjEsMzQ3LjUyLDI1My4wOTEsMzQyLjU1LDI1My4wOTF6IE0zOTMuMDYxLDE2MC4zMDN2MjM1LjM2MiAgYzAsNC45NzEtNC4wMjksOS05LDloLTE0MS4yMmMtNC45NzEsMC05LTQuMDI5LTktOVYxNjAuMzAzYzAtNC4zMjgsMy4wNTUtNy45NDIsNy4xMjYtOC44MDUgIGM1LjU5MS0xNi41MDMsMTguNTYxLTMwLjAxNiwzNS40OTQtMzguMDkxbDQuMjQ2LTQwLjM2MWMwLjQ4MS00LjU4MSw0LjM0NC04LjA1OSw4Ljk1LTguMDU5aDQ3LjU4NmM0LjYwNiwwLDguNDY5LDMuNDc4LDguOTUsOC4wNTkgIGw0LjI0Nyw0MC4zNjNjMTYuOTM0LDguMDc0LDI5LjkwMiwyMS41ODYsMzUuNDk0LDM4LjA4OUMzOTAuMDA2LDE1Mi4zNjEsMzkzLjA2MSwxNTUuOTc1LDM5My4wNjEsMTYwLjMwM3ogTTI5NS4yMjQsMTA3LjEwMiAgYzUuODUtMS4yMjgsMTEuOTU3LTEuODc1LDE4LjIyNi0xLjg3NWM2LjI3MSwwLDEyLjM3NywwLjY0NywxOC4yMjksMS44NzVsLTIuNTM3LTI0LjExNEgyOTcuNzZMMjk1LjIyNCwxMDcuMTAyeiBNMjYwLjY0OCwxNTEuMzAzICBoODEuOTAxaDIzLjcwNGMtOC45MzQtMTYuNTc0LTI5LjY2Ni0yOC4wNzYtNTIuODA0LTI4LjA3NlMyNjkuNTgxLDEzNC43MywyNjAuNjQ4LDE1MS4zMDN6IE0zNzUuMDYxLDE2OS4zMDNIMzUxLjU1djYxLjM5ICBjMCw0Ljk3MS00LjAyOSw5LTksOXMtOS00LjAyOS05LTl2LTMxLjYzOWMtMS42NDUsMi4xNTItNC4yMzgsMy41NDEtNy4xNTYsMy41NDFjLTQuOTcxLDAtOS00LjAyOS05LTl2LTI0LjI5MmgtNjUuNTUydjIxNy4zNjIgIGgxMjMuMjJWMTY5LjMwM3ogTTE2Ni42NjMsMjUxLjU2OHY0NS42M2gyMS40NjZjNC45NzEsMCw5LDQuMDI5LDksOXMtNC4wMjksOS05LDloLTMwLjI3OWMtMC4xMjUsMC4wMDItMC4yNDgsMC4wMDItMC4zNzMsMCAgaC0yNS44NDF2NDUuNjMxaDU2LjQ5M2M0Ljk3MSwwLDksNC4wMjksOSw5cy00LjAyOSw5LTksOUgyMC42MDRjLTQuOTcxLDAtOS00LjAyOS05LTlzNC4wMjktOSw5LTloOTMuMDMxdi00NS42MzFoLTYyLjM4ICBjLTAuMTI1LDAuMDAyLTAuMjQ4LDAuMDAyLTAuMzczLDBIMjAuNjA0Yy00Ljk3MSwwLTktNC4wMjktOS05czQuMDI5LTksOS05aDIxLjQ2NXYtNDUuNjNIMjAuNjA0Yy00Ljk3MSwwLTktNC4wMjktOS05czQuMDI5LTksOS05ICBINzQuMzR2LTQ1LjYzSDIwLjYwNGMtNC45NzEsMC05LTQuMDI5LTktOXM0LjAyOS05LDktOWg4Mi4yM2M0Ljk3MSwwLDksNC4wMjksOSw5cy00LjAyOSw5LTksOUg5Mi4zNHY0NS42M2g5NS43ODkgIGM0Ljk3MSwwLDksNC4wMjksOSw5cy00LjAyOSw5LTksOUgxNjYuNjYzeiBNMTQ4LjY2MywyNTEuNTY4SDYwLjA2OXY0NS42M2g4OC41OTRWMjUxLjU2OHoiIGZpbGw9IiM4ODg4ODgiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" alt="logo" class="uk-navbar-item uk-logo" style="height:40px ; padding: 20px" />
-            </a>         
-            <ul class="uk-navbar-nav">
-                <li>
-                    <a href="index.html">
-                        <span
-                            class="uk-icon uk-margin-small-right"
-                        ></span>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="add.html">
-                        <span
-                            class="uk-icon uk-margin-small-right"
-                            uk-icon="icon: star"
-                        ></span>
-                        Patricipate
-                    </a>
-                </li>
-            </ul>
-          </div>
+          <a href="index.html">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQwNC42NjYgNDA0LjY2NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlhNTElEXzIxNl8iIGQ9Ik0xMzYuMDAxLDUuMTI4YzIuMTM5LTQuNDg2LDcuNTExLTYuMzg5LDExLjk5Ny00LjI1MWwzLjAwNywxLjQzNGM0LjQ4NywyLjE0LDYuMzksNy41MTEsNC4yNTEsMTEuOTk3ICBjLTEuNTQzLDMuMjM3LTQuNzY5LDUuMTI5LTguMTMsNS4xMjljLTEuMjk5LDAtMi42MTctMC4yODItMy44NjctMC44NzhsLTMuMDA3LTEuNDM0QzEzNS43NjQsMTQuOTg2LDEzMy44NjIsOS42MTUsMTM2LjAwMSw1LjEyOHogICBNMjQ2LjA0Miw4Ny44NjdsLTcyLjE1MiwzNC40MDdjLTQuNDg2LDIuMTQtNi4zODksNy41MTItNC4yNSwxMS45OThjMS41NDQsMy4yMzYsNC43NjksNS4xMjgsOC4xMyw1LjEyOCAgYzEuMjk5LDAsMi42MTgtMC4yODIsMy44NjgtMC44NzhsNzIuMTUyLTM0LjQwN2M0LjQ4Ni0yLjE0LDYuMzg5LTcuNTEyLDQuMjUtMTEuOTk4QzI1NS44OTgsODcuNjI5LDI1MC41MjUsODUuNzI5LDI0Ni4wNDIsODcuODY3eiAgIE0yMDQuNzk1LDQ3LjkwNWw0MS4yNDcsMTkuNjY5YzEuMjUxLDAuNTk2LDIuNTY5LDAuODc4LDMuODY4LDAuODc4YzMuMzYxLDAsNi41ODYtMS44OTIsOC4xMy01LjEyOCAgYzIuMTM5LTQuNDg2LDAuMjM2LTkuODU4LTQuMjUtMTEuOTk4bC00MS4yNDctMTkuNjY5Yy00LjQ5LTIuMTM5LTkuODU4LTAuMjM2LTExLjk5OCw0LjI1ICBDMTk4LjQwNiw0MC4zOTMsMjAwLjMwOCw0NS43NjUsMjA0Ljc5NSw0Ny45MDV6IE0xMjQuODM3LDg2Ljc0OGMwLjAwNCwwLDAuMDA4LDAsMC4wMTIsMGw3OS45MzYtMC4xMDEgIGM0Ljk3LTAuMDA2LDguOTk0LTQuMDQxLDguOTg4LTkuMDEyYy0wLjAwNi00Ljk2Ny00LjAzNC04Ljk4OC05LTguOTg4Yy0wLjAwMywwLTAuMDA4LDAtMC4wMTIsMGwtNzkuOTM2LDAuMTAxICBjLTQuOTcsMC4wMDYtOC45OTQsNC4wNDEtOC45ODgsOS4wMTJDMTE1Ljg0Myw4Mi43MjYsMTE5Ljg3MSw4Ni43NDgsMTI0LjgzNyw4Ni43NDh6IE0xNzMuODksMzMuMTY2bDIuNjUyLDEuMjY1ICBjMS4yNSwwLjU5NiwyLjU2OCwwLjg3OCwzLjg2NywwLjg3OGMzLjM2MSwwLDYuNTg3LTEuODkyLDguMTMtNS4xMjljMi4xMzktNC40ODYsMC4yMzYtOS44NTctNC4yNTEtMTEuOTk3bC0yLjY1Mi0xLjI2NSAgYy00LjQ4Ni0yLjEzOC05Ljg1Ny0wLjIzNy0xMS45OTcsNC4yNTFDMTY3LjUwMSwyNS42NTYsMTY5LjQwMywzMS4wMjcsMTczLjg5LDMzLjE2NnogTTg3LjU2Niw4Ni43OTNjMC4wMDMsMCwwLjAwNywwLDAuMDExLDAgIGwzLjMzMy0wLjAwNGM0Ljk3MS0wLjAwNiw4Ljk5NS00LjA0LDguOTg5LTkuMDExYy0wLjAwNi00Ljk2Ny00LjAzMy04Ljk4OS05LTguOTg5Yy0wLjAwMywwLTAuMDA3LDAtMC4wMTEsMGwtMy4zMzMsMC4wMDQgIGMtNC45NzEsMC4wMDYtOC45OTUsNC4wNC04Ljk4OSw5LjAxMUM3OC41NzIsODIuNzcxLDgyLjYsODYuNzkzLDg3LjU2Niw4Ni43OTN6IE0xNDMuMjU4LDEzNi44ODJsLTMuMDA4LDEuNDM1ICBjLTQuNDg2LDIuMTQtNi4zODksNy41MTEtNC4yNDksMTEuOTk3YzEuNTQzLDMuMjM2LDQuNzY4LDUuMTI4LDguMTI5LDUuMTI4YzEuMjk5LDAsMi42MTgtMC4yODIsMy44NjgtMC44NzlsMy4wMDgtMS40MzUgIGM0LjQ4Ny0yLjE0LDYuMzg5LTcuNTExLDQuMjQ5LTExLjk5N0MxNTMuMTE1LDEzNi42NDQsMTQ3Ljc0MiwxMzQuNzQxLDE0My4yNTgsMTM2Ljg4MnogTTM0Mi41NSwyNTMuMDkxYy00Ljk3MSwwLTksNC4wMjktOSw5ICB2NS4yMDNjMCw0Ljk3MSw0LjAyOSw5LDksOXM5LTQuMDI5LDktOXYtNS4yMDNDMzUxLjU1LDI1Ny4xMjEsMzQ3LjUyLDI1My4wOTEsMzQyLjU1LDI1My4wOTF6IE0zOTMuMDYxLDE2MC4zMDN2MjM1LjM2MiAgYzAsNC45NzEtNC4wMjksOS05LDloLTE0MS4yMmMtNC45NzEsMC05LTQuMDI5LTktOVYxNjAuMzAzYzAtNC4zMjgsMy4wNTUtNy45NDIsNy4xMjYtOC44MDUgIGM1LjU5MS0xNi41MDMsMTguNTYxLTMwLjAxNiwzNS40OTQtMzguMDkxbDQuMjQ2LTQwLjM2MWMwLjQ4MS00LjU4MSw0LjM0NC04LjA1OSw4Ljk1LTguMDU5aDQ3LjU4NmM0LjYwNiwwLDguNDY5LDMuNDc4LDguOTUsOC4wNTkgIGw0LjI0Nyw0MC4zNjNjMTYuOTM0LDguMDc0LDI5LjkwMiwyMS41ODYsMzUuNDk0LDM4LjA4OUMzOTAuMDA2LDE1Mi4zNjEsMzkzLjA2MSwxNTUuOTc1LDM5My4wNjEsMTYwLjMwM3ogTTI5NS4yMjQsMTA3LjEwMiAgYzUuODUtMS4yMjgsMTEuOTU3LTEuODc1LDE4LjIyNi0xLjg3NWM2LjI3MSwwLDEyLjM3NywwLjY0NywxOC4yMjksMS44NzVsLTIuNTM3LTI0LjExNEgyOTcuNzZMMjk1LjIyNCwxMDcuMTAyeiBNMjYwLjY0OCwxNTEuMzAzICBoODEuOTAxaDIzLjcwNGMtOC45MzQtMTYuNTc0LTI5LjY2Ni0yOC4wNzYtNTIuODA0LTI4LjA3NlMyNjkuNTgxLDEzNC43MywyNjAuNjQ4LDE1MS4zMDN6IE0zNzUuMDYxLDE2OS4zMDNIMzUxLjU1djYxLjM5ICBjMCw0Ljk3MS00LjAyOSw5LTksOXMtOS00LjAyOS05LTl2LTMxLjYzOWMtMS42NDUsMi4xNTItNC4yMzgsMy41NDEtNy4xNTYsMy41NDFjLTQuOTcxLDAtOS00LjAyOS05LTl2LTI0LjI5MmgtNjUuNTUydjIxNy4zNjIgIGgxMjMuMjJWMTY5LjMwM3ogTTE2Ni42NjMsMjUxLjU2OHY0NS42M2gyMS40NjZjNC45NzEsMCw5LDQuMDI5LDksOXMtNC4wMjksOS05LDloLTMwLjI3OWMtMC4xMjUsMC4wMDItMC4yNDgsMC4wMDItMC4zNzMsMCAgaC0yNS44NDF2NDUuNjMxaDU2LjQ5M2M0Ljk3MSwwLDksNC4wMjksOSw5cy00LjAyOSw5LTksOUgyMC42MDRjLTQuOTcxLDAtOS00LjAyOS05LTlzNC4wMjktOSw5LTloOTMuMDMxdi00NS42MzFoLTYyLjM4ICBjLTAuMTI1LDAuMDAyLTAuMjQ4LDAuMDAyLTAuMzczLDBIMjAuNjA0Yy00Ljk3MSwwLTktNC4wMjktOS05czQuMDI5LTksOS05aDIxLjQ2NXYtNDUuNjNIMjAuNjA0Yy00Ljk3MSwwLTktNC4wMjktOS05czQuMDI5LTksOS05ICBINzQuMzR2LTQ1LjYzSDIwLjYwNGMtNC45NzEsMC05LTQuMDI5LTktOXM0LjAyOS05LDktOWg4Mi4yM2M0Ljk3MSwwLDksNC4wMjksOSw5cy00LjAyOSw5LTksOUg5Mi4zNHY0NS42M2g5NS43ODkgIGM0Ljk3MSwwLDksNC4wMjksOSw5cy00LjAyOSw5LTksOUgxNjYuNjYzeiBNMTQ4LjY2MywyNTEuNTY4SDYwLjA2OXY0NS42M2g4OC41OTRWMjUxLjU2OHoiIGZpbGw9IiM4ODg4ODgiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" alt="logo" class="uk-navbar-item uk-logo logo"  />
+          </a>         
+          <ul class="uk-navbar-nav">
+            <li>
+              <a href="index.html">
+              <span
+                class="uk-icon uk-margin-small-right"
+              ></span>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="add.html">
+                <span
+                  class="uk-icon uk-margin-small-right"
+                  uk-icon="icon: star"
+                ></span>
+                  Patricipate
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     </header>
 
     <main>
-        <form style="padding: 20px; max-width: 984px;">
-            <fieldset class="uk-fieldset">
-        
-                <legend class="uk-legend">Let's add some street art</legend>
-        
-                <div class="uk-margin">
-                    <input class="uk-input" type="text" id="image" placeholder="Image link" required>
-                </div>
-                <div class="uk-margin">
-                    <textarea class="uk-input" type="text" id="description" placeholder="Description"></textarea>
-                </div>
-                <div class="uk-margin">
-                    <input class="uk-input" type="text" id="author" placeholder="Author">
-                </div>
-                <div class="uk-margin">
-                    <input class="uk-input" type="text" id="location" placeholder="Location" required>
-                </div>
-                <div class="uk-margin">
-                  <select class="uk-select" type="text" id="district">
-                      <option selected>Select a district</option>
-                      <option value="Senamiestis">Senamiestis</option>
-                      <option value="Užupis">Užupis</option>
-                      <option value="Centras" >Centras</option>
-                      <option value="Naujamiestis">Naujamiestis</option>
-                  </select>
-              </div>
-                <button class="uk-button uk-button-default" type="submit">Add</button>
-            </fieldset>
-        </form>
-
+      <div class="uk-child-width-1@s uk-light" uk-grid>
         <div>
-          <div class="uk-position-relative uk-visible-toggle uk-light" style="margin: 20px;" tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 3000">
-
-            <ul class="uk-slider-items uk-grid" id="slides">
-                
-            </ul>
-        
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-        
+          <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" id="cover">
+            <h1>Vilnius Steet art</h1>
           </div>
-        </div>        
+        </div>
+      </div>
+
+      <form>
+        <fieldset class="uk-fieldset">
+          <legend class="uk-legend">Let's add some street art</legend>
+          <div class="uk-margin">
+            <input class="uk-input" type="text" id="image" placeholder="Image link" required>
+          </div>
+          <div class="uk-margin">
+              <textarea class="uk-input" type="text" id="description" placeholder="Description"></textarea>
+          </div>
+          <div class="uk-margin">
+            <input class="uk-input" type="text" id="author" placeholder="Author">
+          </div>
+          <div class="uk-margin">
+            <input class="uk-input" type="text" id="location" placeholder="Location" required>
+          </div>
+          <div class="uk-margin">
+            <select class="uk-select" type="text" id="district">
+              <option selected>Select a district</option>
+              <option value="Senamiestis">Senamiestis</option>
+              <option value="Užupis">Užupis</option>
+              <option value="Centras" >Centras</option>
+              <option value="Naujamiestis">Naujamiestis</option>
+            </select>
+          </div>
+          <button class="uk-button uk-button-default" type="submit">Add</button>
+      </fieldset>
+      </form>
+
+      <div>
+        <div id="slider" class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true; autoplay: true; autoplay-interval: 3000">
+
+          <ul class="uk-slider-items uk-grid" id="slides">    
+          </ul>
+        
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        
+        </div>
+      </div>        
     </main>
 
     <footer>&copy; 2020 SS. All Rights Reserved.</footer>
 
     <script>
+  
         document.forms[0].addEventListener("submit", (e) => {
             e.preventDefault();
 
@@ -111,6 +119,7 @@
         }).then(() => alert("You succesfully added some new street art"));
       });
 
+      //slides functionality
       const art = document.getElementById("slides");
         fetch("http://127.0.0.1:3000")
           .then((res) => res.json())
@@ -130,5 +139,5 @@
           
           })
     </script>
-    </body>
+  </body>
 </html>
