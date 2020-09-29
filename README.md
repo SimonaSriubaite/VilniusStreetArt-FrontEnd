@@ -5,7 +5,7 @@ Vilnius Street Art is a project, that main purpose is to create an urban gallery
 #Usage
 
 There is a filter buttons, based on the district, where the street art is located. 
-Also there are read more and read less buttons near the description section, which helps to learn more about the work. 
+Also there are read more and read less buttons near the description section, which help to learn more about the work. 
 
 ## Contributing
 
