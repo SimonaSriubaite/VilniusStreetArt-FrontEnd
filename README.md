@@ -15,5 +15,3 @@ Please make sure to upload appropriate content.
 
 Thank you, and have a nice visit to Vilnius Street Art Gallery.
 
-Demo link: 
-http://207.154.253.58/index.html
