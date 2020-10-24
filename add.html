@@ -104,7 +104,7 @@
         document.forms[0].addEventListener("submit", (e) => {
             e.preventDefault();
 
-            fetch("http://165.227.153.27:80/", {
+            fetch("http://jy8e.c.dedikuoti.lt:8080/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -121,7 +121,7 @@
 
       //slides functionality
       const art = document.getElementById("slides");
-        fetch("http://165.227.153.27:80/")
+        fetch("http://jy8e.c.dedikuoti.lt:8080/")
           .then((res) => res.json())
           .then((data) => {
             data.forEach((slide) => {
