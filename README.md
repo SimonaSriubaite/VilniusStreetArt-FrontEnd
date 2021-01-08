@@ -1,4 +1,4 @@
-# VilniusStreetArt-FrontEnd
+# ᏉilniusStreetArt-FrontEnd ☁
 
 Vilnius Street Art is a project, that main purpose is to create an urban gallery for Vilnius city of Lithuania street art. In the gallery you may find an image and location of various street art works, as well as some description and the author, if this information is known.
 
@@ -14,4 +14,6 @@ Participation is very welcome. For adding new street art please fill the form, a
 Please make sure to upload appropriate content.
 
 Thank you, and have a nice visit to Vilnius Street Art Gallery.
+You can visit the project here: 
+http://jy8e.c.dedikuoti.lt/vsa/index.html
 
